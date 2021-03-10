@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.685);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .headertext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headertext h1 {
+  padding: 10px;
+  color: #351515;
+}
+
+header .headertext h2 {
+  padding: 10px;
+  color: #270a0a;
+}
+
+.board {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(10vw*5);
+}
+
+.board .square {
+  background-color: white;
+  width: 10vw;
+  height: 10vw;
+  border: 1px black solid;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.board .square:hover {
+  background-color: gray;
+}
+
+.board .square.X {
+  background-color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: not-allowed;
+}
+
+.board .square.X:hover {
+  background-color: rgba(255, 0, 0, 0.432);
+}
+
+.board .square.X::before {
+  content: '';
+  width: 10px;
+  height: 10vw;
+  background-color: black;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.board .square.X::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10vw;
+  background-color: black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.board .square.O {
+  cursor: not-allowed;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+}
+
+.board .square.O:hover {
+  background-color: rgba(255, 0, 0, 0.432);
+}
+
+.board .square.O::before {
+  position: absolute;
+  content: "";
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  border: 2px  solid black;
+}
+/*# sourceMappingURL=ticTacToe.css.map */
